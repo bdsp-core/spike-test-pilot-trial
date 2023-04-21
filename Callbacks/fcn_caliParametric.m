@@ -20,5 +20,5 @@ function [xx,yy,cali_idx]=fcn_caliParametric(gt,y_human)
     yy=1./(1+exp(-zz));
     dd=yy-xx;
     aa=trapz(xx,dd);
-    cali_idx=aa/0.5;
+    cali_idx=100*aa/0.5;
 end
